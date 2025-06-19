@@ -1,43 +1,35 @@
-# ==============================================================================
-# .gitignore untuk Proyek Python / YOLO
-# ==============================================================================
-
-# Folder Virtual Environment
-# Mengabaikan semua folder environment umum
-venv/
+# --- Lingkungan Virtual (Virtual Environment) ---
+# Folder ini berisi semua library yang diinstal dan spesifik untuk mesin lokal.
+# Ukurannya besar dan tidak boleh dimasukkan ke Git.
 .venv/
-env/
-.env
+venv/
+*.env
 
-# Cache dan file terkompilasi Python
+# --- File Model Machine Learning ---
+# File model seperti .pt, .onnx, dll., biasanya berukuran besar dan
+# seringkali diunduh secara otomatis oleh library. Jangan masukkan ke Git.
+*.pt
+*.onnx
+*.engine
+
+# --- Cache & File Kompilasi Python ---
+# Dibuat secara otomatis oleh Python saat runtime.
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
 
-# Folder hasil training dan ekspor dari Ultralytics
-# Ini sangat penting agar tidak mengunggah model besar
-runs/
-
-# Dataset yang diunduh
-# Folder dataset Roboflow biasanya memiliki nama proyeknya
-# Tambahkan nama spesifik folder dataset Anda di sini jika perlu
-# Contoh: hand-gesture-detection-3o45u-2/
-*-[0-9]/
-
-# Konfigurasi Editor/IDE
+# --- Folder Spesifik IDE/Editor ---
+# Menyimpan pengaturan personal untuk editor kode Anda.
 .vscode/
 .idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.swp
 
-# File spesifik sistem operasi
-.DS_Store
-Thumbs.db
-
-# Log files
+# --- File Log dan Output ---
+# Jika program Anda menghasilkan file log atau output lainnya.
 *.log
+/runs/
 
