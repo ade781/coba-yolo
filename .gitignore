@@ -1,0 +1,43 @@
+# ==============================================================================
+# .gitignore untuk Proyek Python / YOLO
+# ==============================================================================
+
+# Folder Virtual Environment
+# Mengabaikan semua folder environment umum
+venv/
+.venv/
+env/
+.env
+
+# Cache dan file terkompilasi Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Folder hasil training dan ekspor dari Ultralytics
+# Ini sangat penting agar tidak mengunggah model besar
+runs/
+
+# Dataset yang diunduh
+# Folder dataset Roboflow biasanya memiliki nama proyeknya
+# Tambahkan nama spesifik folder dataset Anda di sini jika perlu
+# Contoh: hand-gesture-detection-3o45u-2/
+*-[0-9]/
+
+# Konfigurasi Editor/IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+
+# File spesifik sistem operasi
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
